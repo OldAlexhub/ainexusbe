@@ -3,7 +3,7 @@ import axios from "axios";
 const GetFraudPython = async (req, res) => {
   try {
     // Call the Python API to detect fraud
-    const response = await axios.get("http://127.0.0.1:5000/fraud"); // Python API URL
+    const response = await axios.get("https://pyainexus.onrender.com/fraud");
 
     const data = response.data;
     // console.log(data);
