@@ -3,7 +3,7 @@ import axios from "axios";
 const JobPython = async (req, res) => {
   try {
     // Call the Flask API
-    const response = await axios.get(`http://127.0.0.1:5000/match`);
+    const response = await axios.get(`${process.env.PYTHON_APP}/match`);
 
     // Assuming response is an array of objects
     const data = response.data; // No need to check `response.data.success` if it's a direct data response

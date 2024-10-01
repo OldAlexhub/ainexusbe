@@ -5,7 +5,7 @@ const GetPolicy = async (req, res) => {
     const { searchedTerm } = req.params;
     // console.log(searchedTerm);
     const response = await axios.get(
-      `http://127.0.0.1:5000/handbook/${searchedTerm}`
+      `${process.env.PYTHON_APP}/handbook/${searchedTerm}`
     );
 
     const data = response.data;
